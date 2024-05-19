@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0fff0;
+}
+
+header {
+    background-color: #2e8b57;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    position: relative;
+    display: inline-block;
+}
+
+header h1::before, header h1::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: #98fb98;
+    top: 50%;
+}
+
+header h1::before {
+    left: -60%;
+}
+
+header h1::after {
+    right: -60%;
+}
+
+nav {
+    background-color: #3cb371;
+    padding: 0.5rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    color: #98fb98;
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+}
+
+.project-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #3cb371;
+    padding: 1rem;
+    width: calc(33.333% - 2rem);
+    box-sizing: border-box;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+    background-color: #e0ffe0; 
+    border-color: #2e8b57;
+}
+
+.project-card:nth-child(2) {
+    background-color: #98fb98;
+    border: 2px solid #3cb371;
+}
+
+.project-cards + .project-card {
+    margin-top: 2rem;
+    border-color: #3cb371; 
+}
+
+footer {
+    background-color: #2e8b57;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.contact-info p:last-child {
+    font-weight: bold;
+}
