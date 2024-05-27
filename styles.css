@@ -1,109 +1,71 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f0fff0;
-}
-
-header {
-    background-color: #2e8b57;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-}
-
-header h1 {
-    position: relative;
-    display: inline-block;
-}
-
-header h1::before, header h1::after {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 2px;
-    background-color: #98fb98;
-    top: 50%;
-}
-
-header h1::before {
-    left: -60%;
-}
-
-header h1::after {
-    right: -60%;
-}
-
-nav {
-    background-color: #3cb371;
-    padding: 0.5rem 0;
-}
-
-nav ul {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    list-style: none;
+    height: 100vh;
+    background-color: #f0f0f0;
     margin: 0;
-    padding: 0;
 }
 
-nav li {
-    margin: 0 1rem;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-nav a:hover {
-    color: #98fb98;
-    text-decoration: underline;
-}
-
-main {
-    padding: 2rem;
-}
-
-.project-cards {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.project-card {
+.calculator {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
     background-color: #fff;
-    border: 1px solid #3cb371;
-    padding: 1rem;
-    width: calc(33.333% - 2rem);
-    box-sizing: border-box;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-.project-card:hover {
-    background-color: #e0ffe0; 
-    border-color: #2e8b57;
-}
-
-.project-card:nth-child(2) {
-    background-color: #98fb98;
-    border: 2px solid #3cb371;
-}
-
-.project-cards + .project-card {
-    margin-top: 2rem;
-    border-color: #3cb371; 
-}
-
-footer {
-    background-color: #2e8b57;
-    color: #fff;
-    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.contact-info p:last-child {
-    font-weight: bold;
+.inputs {
+    margin-bottom: 20px;
+}
+
+.inputs input {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#operation {
+    text-align: center; /* Центрування тексту */
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.keyboard button {
+    padding: 15px;
+    font-size: 16px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.keyboard button:hover {
+    background-color: #d0d0d0;
+}
+
+.keyboard button.operator {
+    background-color: #f9a825;
+}
+
+.keyboard button.operator:hover {
+    background-color: #f57f17;
+}
+
+.calculate-btn:hover {
+    background-color: #45a049;
+}
+
+.calculate-btn:active {
+    background-color: #39843c;
 }
